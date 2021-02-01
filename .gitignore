@@ -20,6 +20,8 @@ config.properties
 # sbteclipse plugin
 .target
 
+/target/
+
 ### Java ###
 # Compiled class file
 *.class
