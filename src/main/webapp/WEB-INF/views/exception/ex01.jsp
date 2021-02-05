@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Exception 예제 01 : @Restcontrolleradvice(Get방식)</title>
+<title>Exception 예제 01. @Restcontrolleradvice(Get방식)</title>
 <%@ include file="/WEB-INF/views/include/source.jsp" %>
 <script>
 function sendMsg() {
@@ -22,7 +22,7 @@ $(document).ready(function() {
 	<div class="container">
 		<div class="row border-bottom mb-3">
 			<div class="col-12">
-				<p class="h1">Ex01 : @RestControllerAdvice - Get</p>
+				<p class="h1">EX01. @RestControllerAdvice - Get</p>
 			</div>
 		</div>
 		
@@ -44,6 +44,8 @@ $(document).ready(function() {
 			</div>
 		</div>		
 	</div>
+	
+	<%@ include file="/WEB-INF/views/common/bottom.jsp" %>
 </form>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Apache POI 예제 01 : 엑셀 다루기</title>
+<title>Apache POI 예제 01. 엑셀 다루기</title>
 <%@ include file="/WEB-INF/views/include/source.jsp" %>
 <script>
 $(document).ready(function() {
@@ -21,7 +21,7 @@ $(document).ready(function() {
 	<div class="container">
 		<div class="row border-bottom mb-3">
 			<div class="col-12">
-				<p class="h1">Ex01 : Apache POI Excel 데이터 쓰기</p>
+				<p class="h1">EX01. Apache POI Excel 데이터 쓰기</p>
 			</div>
 		</div>
 		
@@ -64,6 +64,8 @@ $(document).ready(function() {
 			</div>
 		</div>
 	</div>
+	
+	<%@ include file="/WEB-INF/views/common/bottom.jsp" %>
 </form>
 </body>
 </html>

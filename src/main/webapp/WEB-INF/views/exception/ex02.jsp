@@ -39,7 +39,7 @@ $(document).ready(function() {
 	<div class="container">
 		<div class="row border-bottom mb-3">
 			<div class="col-12">
-				<p class="h1">Ex02 : @RestControllerAdvice - Post</p>
+				<p class="h1">EX02. @RestControllerAdvice - Post</p>
 			</div>
 		</div>
 		
@@ -61,6 +61,8 @@ $(document).ready(function() {
 			</div>
 		</div>		
 	</div>
+	
+	<%@ include file="/WEB-INF/views/common/bottom.jsp" %>
 </form>
 </body>
 </html>
