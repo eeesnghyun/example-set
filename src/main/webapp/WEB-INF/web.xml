@@ -58,4 +58,12 @@
 		<url-pattern>*.ajax</url-pattern>
 	</servlet-mapping>
 
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>/views/*</url-pattern>
+			<include-prelude>/include/common.jsp</include-prelude>
+			<!-- <include-coda>/common/footer.jspf</include-coda> -->
+		</jsp-property-group>
+	</jsp-config>
+
 </web-app>

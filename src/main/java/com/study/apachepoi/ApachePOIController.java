@@ -23,16 +23,15 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class Ex01 {
+public class ApachePOIController {
 
-	private static final Logger logger = LoggerFactory.getLogger(Ex01.class);
+	private static final Logger logger = LoggerFactory.getLogger(ApachePOIController.class);
 
 	@RequestMapping(value = "/apachepoi/ex01.do", method = RequestMethod.GET)
 	public String test2(Locale locale, Model model) {
-		logger.info("--------------------ex01.do--------------------");
+		logger.info("### Request URL : /apachepoi/ex01.do");
 		return "/apachepoi/ex01";
-	}	
-	
+	}		
 
 	@RequestMapping(value = "/apachepoi/goToExcel.do", method = { RequestMethod.GET,RequestMethod.POST })
     public ModelAndView goToExcel(Model model, @RequestParam HashMap<String, Object> paramMap) throws Exception {		          	  	
