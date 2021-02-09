@@ -153,7 +153,7 @@ public class ApachePOIController {
 									value = (int) cell.getNumericCellValue() + "";
 	                            break;
 								case STRING:
-									value = cell.getStringCellValue();									
+									value = cell.getStringCellValue();
 	                            break;
 								case BLANK:
 									value = cell.getBooleanCellValue() + "";

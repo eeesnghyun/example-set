@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Exception 예제 01. @Restcontrolleradvice(Get방식)</title>
+<title>Exception Handler Example</title>
 <%@ include file="/WEB-INF/views/include/source.jsp" %>
 <script>
 function sendMsg() {

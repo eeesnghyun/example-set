@@ -16,7 +16,7 @@
 			<h2>Apache POI Example</h2>
 		</div>
 		<div class="col-12">
-			<ul class="list-group">
+			<ul class="list-group list-group-flush">
 			  <li class="list-group-item"><a href="/apachepoi/ex01.do" class="text-decoration-none">EX01. Apache POI Excel 데이터 쓰기</a></li>
 			  <li class="list-group-item"><a href="/apachepoi/ex02.do" class="text-decoration-none">EX02. Apache POI Excel 데이터 읽기(서버단)</a></li>
 			  <li class="list-group-item"><a href="/apachepoi/ex03.do" class="text-decoration-none">EX03. Apache POI Excel 데이터 읽기(클라이언트단)</a></li>
@@ -29,9 +29,22 @@
 			<h2>Exception Handler Example</h2>
 		</div>
 		<div class="col-12">
-			<ul class="list-group">
+			<ul class="list-group list-group-flush">
 			  <li class="list-group-item"><a href="/exception/ex01.do" class="text-decoration-none">EX01. @RestControllerAdvice - Get</a></li>    
 			  <li class="list-group-item"><a href="/exception/ex02.do" class="text-decoration-none">EX02. @RestControllerAdvice - Post </a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="row mb-2">
+		<div class="col-12">
+			<h2>XSS Filter Example</h2>
+		</div>
+		<div class="col-12">
+			<ul class="list-group list-group-flush">
+			  <li class="list-group-item"><a href="/xss/ex01.do" class="text-decoration-none">EX01. Lucy-xss-servlet-filter 적용</a></li>    			  
+			  <li class="list-group-item"><a href="/xss/ex02.do" class="text-decoration-none">EX02. Lucy-xss-servlet-filter 필터 규칙사용</a></li>
+			  <li class="list-group-item"><a href="/xss/ex03.do" class="text-decoration-none">EX03. Lucy-xss-servlet-filter JSON 데이터는?</a></li>			  
 			</ul>
 		</div>
 	</div>

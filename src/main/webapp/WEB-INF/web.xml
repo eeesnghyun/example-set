@@ -26,10 +26,20 @@
 	      <param-value>true</param-value>
 	    </init-param>
 	</filter>
-	
+			
 	<filter-mapping>
 	     <filter-name>encodingFilter</filter-name>
 	     <url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<!-- xssEscapeServletFilter는 CharacterEncodingFilter 뒤에 위치해야 한다. -->
+	<filter>
+		<filter-name>xssEscapeServletFilter</filter-name>
+		<filter-class>com.navercorp.lucy.security.xss.servletfilter.XssEscapeServletFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>xssEscapeServletFilter</filter-name>
+		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 	
 	<!-- Creates the Spring Container shared by all Servlets and Filters -->
@@ -52,13 +62,5 @@
 		<servlet-name>appServlet</servlet-name>
 		<url-pattern>*.do</url-pattern>
 	</servlet-mapping>
-
-	<jsp-config>
-		<jsp-property-group>
-			<url-pattern>/views/*</url-pattern>
-			<include-prelude>/include/common.jsp</include-prelude>
-			<!-- <include-coda>/common/footer.jspf</include-coda> -->
-		</jsp-property-group>
-	</jsp-config>
 
 </web-app>

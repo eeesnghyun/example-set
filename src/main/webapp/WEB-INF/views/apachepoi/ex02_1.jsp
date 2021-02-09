@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Apache POI 예제 02. 엑셀 다루기</title>
+<title>Apache POI Example</title>
 <%@ include file="/WEB-INF/views/include/source.jsp" %>
 <script>
 $(document).ready(function() {

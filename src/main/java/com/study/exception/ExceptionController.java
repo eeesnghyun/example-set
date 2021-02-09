@@ -35,10 +35,10 @@ public class ExceptionController {
 	}	
 	
 	@RequestMapping(value = "/exception/sqlExceptionGet.do", method = { RequestMethod.GET })
-	public ModelAndView sqlExceptionGet(HttpServletRequest reqest) throws Exception {	
+	public ModelAndView sqlExceptionGet(HttpServletRequest request) throws Exception {	
 		ModelAndView mav = new ModelAndView();				
 		
-		String msg = reqest.getParameter("msg");
+		String msg = request.getParameter("msg");
 			
 		if("Y".equals(msg)) {
 			throw new CustomSqlException("예외 발생");
@@ -53,7 +53,7 @@ public class ExceptionController {
 	}
 	
 	@RequestMapping(value = "/exception/sqlExceptionPost.do", method = { RequestMethod.POST })
-	public @ResponseBody Map<String, Object> sqlExceptionPost(HttpServletRequest reqest, @RequestBody String jsonParam) throws Exception {
+	public @ResponseBody Map<String, Object> sqlExceptionPost(@RequestBody String jsonParam) throws Exception {
 		JSONObject result = new JSONObject(); 
 		
 		try {
