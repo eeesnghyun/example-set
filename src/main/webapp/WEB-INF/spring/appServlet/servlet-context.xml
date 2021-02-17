@@ -3,13 +3,17 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:p="http://www.springframework.org/schema/p"
 	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
 	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd
 		http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
 		http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
 	<!-- DispatcherServlet Context: defines this servlet's request-processing infrastructure -->
-	
+
 	<!-- Enables the Spring MVC @Controller programming model -->
 	<annotation-driven />
 
@@ -22,27 +26,56 @@
 		<beans:property name="suffix" value=".jsp" />
 		<beans:property name="order" value="2" />
 	</beans:bean>
-	
+
 	<context:component-scan base-package="com" />
-			
+
 	<beans:bean class="org.springframework.web.servlet.view.BeanNameViewResolver">
     	<beans:property name="order" value="0"/>
     </beans:bean>
-    
+
     <!-- 파일 업로드 관리 -->
-	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">	        
-        <beans:property name="maxUploadSize" value="10485760" />   <!-- Max upload size : 10MB	 -->        
+	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <beans:property name="maxUploadSize" value="10485760" />   <!-- Max upload size : 10MB	 -->
         <beans:property name="maxInMemorySize" value="10485760" /> <!-- Max size of file in memory : 10MB -->
     </beans:bean>
-        
-    <!-- 파일 다운로드 관리 -->    
+
+    <!-- 파일 다운로드 관리 -->
     <beans:bean id="download" class="com.study.util.FileDownload"/>
-	
+
 	<!-- jsonView 설정  -->
 	<beans:bean class="org.springframework.web.servlet.view.BeanNameViewResolver" id="viewResolver" p:order="0"/>
 	<beans:bean class="org.springframework.web.servlet.view.json.MappingJackson2JsonView" id="jsonView">
 	    <beans:property name="contentType" value="application/json;charset=UTF-8"/>
-	</beans:bean>		
-	
-	
+	</beans:bean>
+
+	<!-- 트랜젝션 관리 -->
+	<beans:bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<beans:property name="dataSource" ref="dataSource" />
+	</beans:bean>
+
+	<!-- 어노테이션에 기반한 트랜잭션 활성화(@Transactional 사용시) -->
+	<!-- <tx:annotation-driven /> -->
+
+	<!-- 트랜잭션 AOP 설정 -->
+	<tx:advice id="transactionAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="*" rollback-for="Exception" />
+		</tx:attributes>
+	</tx:advice>
+
+	<!-- 트랜잭션 AOP 적용 -->
+	<aop:config>
+		<!--
+		execution(* com.study.transaction.service.impl.*Impl.*(..))
+		[리턴타입 선언] 		  - *     : 모든 리턴 타입 포함
+		[패키지경로 선언] 		  - com.study.transaction.service.impl : 패키지 경로
+		[클래스명 선언]		      - *Impl : 패키지내에 Impl로 끝나는 모든 클래스
+		[메소드명(매개변수) 선언] - *(..) : 모든 메소드(모든 인자값) 선택
+		-->
+        <aop:pointcut id="requiredTx" expression="execution(* com.study.transaction.service.impl.*Impl.*(..))"/>
+
+        <!-- 정의된 pointcut과 transactionAdvice를 연결 -->
+        <aop:advisor advice-ref="transactionAdvice" pointcut-ref="requiredTx" />
+    </aop:config>
+
 </beans:beans>

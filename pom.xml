@@ -10,11 +10,11 @@
 	<properties>
 		<!-- Java -->
 		<java-version>1.8</java-version>
-		
+
 		<!-- Spring -->
-		<org.springframework-version>4.3.14.RELEASE</org.springframework-version>		
+		<org.springframework-version>4.3.14.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
-		
+
 		<!-- Logging -->
 		<org.slf4j-version>1.7.25</org.slf4j-version>
 	</properties>
@@ -37,49 +37,49 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${org.springframework-version}</version>
 		</dependency>
-			
+
 		<!-- Spring JDBC -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-jdbc</artifactId>
 			<version>${org.springframework-version}</version>
-		</dependency> 
-		
+		</dependency>
+
 		<!-- DBCP2 -->
 		<dependency>
 		    <groupId>org.apache.commons</groupId>
 		    <artifactId>commons-dbcp2</artifactId>
 		    <version>2.6.0</version>
-		</dependency>	
-		
+		</dependency>
+
 		<!-- MariaDB : https://mvnrepository.com/artifact/org.mariadb.jdbc/mariadb-java-client -->
 		<dependency>
 		    <groupId>org.mariadb.jdbc</groupId>
 		    <artifactId>mariadb-java-client</artifactId>
 		    <version>2.3.0</version>
 		</dependency>
-		
+
 		<dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
             <version>5.1.6</version>
         </dependency>
-        
+
 		<!-- Mybatis -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis</artifactId>
 			<version>3.4.6</version>
-		</dependency>	
+		</dependency>
 
-		<!-- Mybatis - Spring 연동 -->		
+		<!-- Mybatis - Spring 연동 -->
 		<dependency>
 			<groupId>org.mybatis</groupId>
 			<artifactId>mybatis-spring</artifactId>
 			<version>1.3.2</version>
-		</dependency>	
-				
-		<!-- Log4j2 -->		
+		</dependency>
+
+		<!-- Log4j2 -->
     	<!-- Binding for Log4J -->
 	    <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl -->
 		<dependency>
@@ -88,19 +88,19 @@
 		    <version>2.12.1</version>
 		    <scope>test</scope>
 		</dependency>
- 
+
   		<!-- Log4j API and Core implementation required for binding -->
-		<dependency>		
+		<dependency>
 			<groupId>org.bgee.log4jdbc-log4j2</groupId>
 			<artifactId>log4jdbc-log4j2-jdbc4</artifactId>
 			<version>1.16</version>
-		</dependency>		
+		</dependency>
 		<dependency>
 		    <groupId>org.apache.logging.log4j</groupId>
 		    <artifactId>log4j-core</artifactId>
 		    <version>2.9.1</version>
 		</dependency>
-		
+
 		<!-- JSON -->
 		<!-- https://mvnrepository.com/artifact/com.googlecode.json-simple/json-simple -->
 		<dependency>
@@ -108,7 +108,7 @@
 		    <artifactId>json-simple</artifactId>
 		    <version>1.1.1</version>
 		</dependency>
-				
+
 		<dependency>
 		    <groupId>com.fasterxml.jackson.core</groupId>
 		    <artifactId>jackson-core</artifactId>
@@ -123,8 +123,16 @@
 		    <groupId>com.fasterxml.jackson.core</groupId>
 		    <artifactId>jackson-databind</artifactId>
 		    <version>2.8.8</version>
-		</dependency>		
-			
+		</dependency>
+
+		<!-- Gson : JSON - VO 매핑 -->
+		<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+		<dependency>
+		    <groupId>com.google.code.gson</groupId>
+		    <artifactId>gson</artifactId>
+		    <version>2.8.4</version>
+		</dependency>
+
 		<!-- File upload -->
 		<!-- https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload -->
 		<dependency>
@@ -132,14 +140,14 @@
             <artifactId>commons-fileupload</artifactId>
             <version>1.3.2</version>
         </dependency>
-         
+
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>2.5</version>
-        </dependency>	
-				
-		<!-- Apache POI -->		
+        </dependency>
+
+		<!-- Apache POI -->
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
 		    <groupId>org.apache.poi</groupId>
@@ -152,21 +160,27 @@
 		    <artifactId>poi-ooxml</artifactId>
 		    <version>4.1.2</version>
 		</dependency>
-				
-		<!-- Lucy-xss-servlet-filter -->		
+
+		<!-- Lucy-xss-servlet-filter -->
 		<dependency>
 			<groupId>com.navercorp.lucy</groupId>
 			<artifactId>lucy-xss-servlet</artifactId>
 			<version>2.0.1</version>
-		</dependency>				
-				
+		</dependency>
+
 		<!-- AspectJ -->
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjrt</artifactId>
 			<version>${org.aspectj-version}</version>
-		</dependency>	
-		
+		</dependency>
+
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>${org.aspectj-version}</version>
+		</dependency>
+
 		<!-- Logging -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -216,7 +230,7 @@
 			<artifactId>javax.inject</artifactId>
 			<version>1</version>
 		</dependency>
-				
+
 		<!-- Servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -235,14 +249,14 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-	
+
 		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
 			<scope>test</scope>
-		</dependency>				
+		</dependency>
 	</dependencies>
     <build>
         <plugins>
@@ -280,7 +294,7 @@
                     <mainClass>org.test.int1.Main</mainClass>
                 </configuration>
             </plugin>
-            <!-- Maven Encoding -->            
+            <!-- Maven Encoding -->
 			<plugin>
 		    	<groupId>org.apache.maven.plugins</groupId>
 			    <artifactId>maven-compiler-plugin</artifactId>

@@ -3,6 +3,7 @@
 <configuration>
 
 	<typeAliases>
+		<typeAlias alias="TransactionVO" type="com.study.transaction.vo.TransactionVO"></typeAlias>
 	</typeAliases>
 
 </configuration>
