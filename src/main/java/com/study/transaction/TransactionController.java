@@ -33,6 +33,12 @@ public class TransactionController {
 		return "/transaction/ex01";
 	}
 
+	@RequestMapping(value = "/transaction/ex02.do", method = RequestMethod.GET)
+	public String ex02(Locale locale, Model model) {
+		logger.info("### Request URL : /transaction/ex02.do");
+		return "/transaction/ex02";
+	}
+
 	@RequestMapping(value = "/transaction/testTransaction.do", method = { RequestMethod.POST })
 	public @ResponseBody JSONObject testTransaction(@RequestBody String jsonParam) throws Exception {
 		Gson gson = new Gson();
@@ -51,6 +57,27 @@ public class TransactionController {
 
 			//throw new CustomSqlException("ERROR");
 			result.put("msg", "ERROR");
+		}
+		return result;
+	}
+
+	@RequestMapping(value = "/transaction/testLogBefore.do", method = { RequestMethod.POST })
+	public @ResponseBody JSONObject testLogBefore(@RequestBody String jsonParam) throws Exception {
+		Gson gson = new Gson();
+		JSONObject result = new JSONObject();
+		TransactionVO transactionVO = new TransactionVO();
+
+		try {
+			transactionVO = gson.fromJson(jsonParam, TransactionVO.class);
+
+			transactionService.insertEx02(transactionVO);
+
+			result.put("msg", "SUCCESS");
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+
+			throw new CustomSqlException("ERROR");
 		}
 		return result;
 	}

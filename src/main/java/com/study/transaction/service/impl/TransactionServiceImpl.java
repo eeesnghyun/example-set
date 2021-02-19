@@ -22,4 +22,11 @@ public class TransactionServiceImpl implements TransactionService {
 		transactionDAO.insertNull();				// Error! Roll back
 	}
 
+	@Override
+	public String insertEx02(TransactionVO transactionVO) throws Exception {
+		transactionDAO.insertData(transactionVO);	// Success
+
+		return "OK";
+	}
+
 }

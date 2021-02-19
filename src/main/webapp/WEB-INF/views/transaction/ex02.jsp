@@ -15,7 +15,7 @@ function testTransaction() {
 	$.ajax({
         type       : "POST",
         async      : false,
-        url        : "/transaction/testTransaction.do",
+        url        : "/transaction/testLogBefore.do",
         cache      : false,
         dataType   : "json",
         data       : JSON.stringify(params),
@@ -41,7 +41,7 @@ $(document).ready(function() {
 	<div class="container">
 		<div class="row border-bottom mb-3">
 			<div class="col-12">
-				<p class="h1">EX01. 선언적 트랜잭션</p>
+				<p class="h1">EX02. AOP를 이용해 Log 기록하기</p>
 			</div>
 		</div>
 

@@ -48,6 +48,9 @@
 	    <beans:property name="contentType" value="application/json;charset=UTF-8"/>
 	</beans:bean>
 
+	<!-- Log 기록 -->
+	<beans:bean id="logAdvice" class="com.study.util.LogAdvice" />
+
 	<!-- 트랜젝션 관리 -->
 	<beans:bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<beans:property name="dataSource" ref="dataSource" />
@@ -78,4 +81,5 @@
         <aop:advisor advice-ref="transactionAdvice" pointcut-ref="requiredTx" />
     </aop:config>
 
+	<aop:aspectj-autoproxy></aop:aspectj-autoproxy>
 </beans:beans>
