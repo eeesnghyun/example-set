@@ -2,8 +2,6 @@
 
 공부한 내용을 바탕으로 만든 예제 모음집입니다.
 
-예제는 계속 추가될 예정입니다.
-
 <br>
 
 #### 환경
@@ -39,8 +37,11 @@
 - EX01. Apache POI Excel 데이터 쓰기
 - EX02. Apache POI Excel 데이터 읽기(서버단)
 - EX03. Apache POI Excel 데이터 읽기(클라이언트단)
+- Ex04. Apache POI Word 데이터 쓰기
 
-:page_facing_up: ​포스팅 : https://shxrecord.tistory.com/209
+:page_facing_up: Excel 포스팅 : [https://shxrecord.tistory.com/209](https://shxrecord.tistory.com/209){:target="_blank"}
+
+:page_facing_up: Word 포스팅 : [https://shxrecord.tistory.com/246](https://shxrecord.tistory.com/246){:target="_blank"}
 
 <br>
 
@@ -49,7 +50,7 @@
 * EX01. @RestControllerAdvice - Get
 * EX02. @RestControllerAdvice - Post
 
-:page_facing_up: 포스팅 : https://shxrecord.tistory.com/210
+:page_facing_up: 포스팅 : [https://shxrecord.tistory.com/210](https://shxrecord.tistory.com/210)
 
 <br>
 
