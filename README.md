@@ -39,9 +39,9 @@
 - EX03. Apache POI Excel 데이터 읽기(클라이언트단)
 - Ex04. Apache POI Word 데이터 쓰기
 
-:page_facing_up: Excel 포스팅 : [https://shxrecord.tistory.com/209](https://shxrecord.tistory.com/209){:target="_blank"}
+:page_facing_up: Excel 포스팅 : [https://shxrecord.tistory.com/209](https://shxrecord.tistory.com/209)
 
-:page_facing_up: Word 포스팅 : [https://shxrecord.tistory.com/246](https://shxrecord.tistory.com/246){:target="_blank"}
+:page_facing_up: Word 포스팅 : [https://shxrecord.tistory.com/246](https://shxrecord.tistory.com/246)
 
 <br>
 
