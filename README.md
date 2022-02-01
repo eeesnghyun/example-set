@@ -1,6 +1,22 @@
 # Example-set
 
-예제 모음 테스트방법
+> Java 기반 예제 모음집입니다. 
+>
+
+------
+
+## ⚙ 환경
+
+- Eclipse 2019-06
+- Java 8
+- Spring 4
+- Maven
+- MyBatis
+- Tomcat 9
+
+
+
+#### 테스트
 
 1. 프로젝트 import
 
@@ -16,20 +32,12 @@
 4. webapp/config/config.properties 파일 추가
 
    > spring.datasource.driverClassname=net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+   >
    > spring.datasource.url=jdbc:log4jdbc:mysql://127.0.0.1:3306/DB스키마
+   >
    > spring.datasource.username=아이디
+   >
    > spring.datasource.password=패스워드
-
-<br>
-
-#### 환경
-
-- Eclipse 2019-06
-- Java 8
-- Spring 4
-- Maven
-- MyBatis
-- Tomcat 9
 
 ------
 
