@@ -1,19 +1,34 @@
-# Example-Set
+# Example-set
 
-공부한 내용을 바탕으로 만든 예제 모음집입니다.
+예제 모음 테스트방법
+
+1. 프로젝트 import
+
+2. project facets 설정(Dynamic web module, Java, Javascript)
+
+3. config 설정
+
+   1. java : default output folder : example-set/target/classes
+   2. web module
+      - context-root : /
+      - content directory : src/main/webapp
+
+4. webapp/config/config.properties 파일 추가
+
+   > spring.datasource.driverClassname=net.sf.log4jdbc.sql.jdbcapi.DriverSpy
+   > spring.datasource.url=jdbc:log4jdbc:mysql://127.0.0.1:3306/DB스키마
+   > spring.datasource.username=아이디
+   > spring.datasource.password=패스워드
 
 <br>
 
 #### 환경
 
 - Eclipse 2019-06
-
+- Java 8
 - Spring 4
-
 - Maven
-
 - MyBatis
-
 - Tomcat 9
 
 ------
