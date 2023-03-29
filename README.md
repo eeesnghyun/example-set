@@ -7,7 +7,6 @@
 
 ## ⚙ 환경
 
-- Eclipse 2019-06
 - Java 8
 - Spring 4
 - Maven
